@@ -89,6 +89,7 @@ a:hover{
 
 .jumbotron {
 background-image:url("Jumbotron.jpg");
+background-attachment: fixed;
 height:500px;
 background-size:cover;
 padding: 30px 15px;
