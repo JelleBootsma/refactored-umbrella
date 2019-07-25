@@ -1,21 +1,49 @@
 var main = function() {
 
   $('.icon-menu').click(function() {
-    $('.menu').animate({
+    if (matchMedia('(max-width: 600px)').matches){
+	$('.menu').animate({
       left: "0px"
     }, 400);
 
     $('body').animate({
-      left: "285px"
+      left: "100%"
     }, 400);
 	$('.icon-menu').animate({
-      left: "285px"
+      left: "100%"
     }, 400);
+	}
+	else if (matchMedia('(max-width: 768px)').matches){
+	$('.menu').animate({
+      left: "0px"
+    }, 400);
+
+    $('body').animate({
+      left: "25%"
+    }, 400);
+	$('.icon-menu').animate({
+      left: "25%"
+    }, 400);
+	}
+	else{
+	$('.menu').animate({
+      left: "0px"
+    }, 400);
+
+    $('body').animate({
+      left: "15%"
+    }, 400);
+	$('.icon-menu').animate({
+      left: "15%"
+    }, 400);
+	}
   });
 
   $('.icon-close').click(function() {
-    $('.menu').animate({
-      left: "-285px"
+	if (matchMedia('(max-width: 600px)').matches){
+	
+	$('.menu').animate({
+      left: "-100%"
     }, 400);
 
     $('body').animate({
@@ -24,6 +52,31 @@ var main = function() {
 	$('.icon-menu').animate({
       left: "0px"
     }, 400);
+	}
+	else if (matchMedia('(max-width: 768px)').matches){
+	$('.menu').animate({
+      left: "-25%"
+    }, 400);
+
+    $('body').animate({
+      left: "0px"
+    }, 400);
+	$('.icon-menu').animate({
+      left: "0px"
+    }, 400);
+	}
+	else {
+	$('.menu').animate({
+      left: "-15%"
+    }, 400);
+
+    $('body').animate({
+      left: "0px"
+    }, 400);
+	$('.icon-menu').animate({
+      left: "0px"
+    }, 400);	
+	}
   });
   $('#menu1').mouseenter(function() {
 	$('#menu1').animate({
